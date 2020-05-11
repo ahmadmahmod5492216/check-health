@@ -2,14 +2,18 @@
 
 import sys
 import os
-
+state =True
 def check():
 	if os.path.exists("/")
-		sys.exit(0)
+		state=False
 	else :
-		sys.exit(1)
+		state =True
+
 
 def main():
-	check()
+	if check() :
+		sys.exit(1)
+	else:
+		sys.exit(0)
 
 main()
